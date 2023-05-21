@@ -9,12 +9,12 @@ using Dapper;
 
 namespace DAL.Services
 {
-    public class SQLIteService<T> : IDataRepository<T> where T: IDataMember, IDisposable
+    public class SQLiteService<T> : IDataRepository<T> where T: IDataMember, IDisposable
     {
         private string _connectionString;
         private SQLiteConnection _connection;
 
-        public SQLIteService(string ConnectionString)
+        public SQLiteService(string ConnectionString)
         {
             _connectionString = ConnectionString;
             _connection = new(ConnectionString);
